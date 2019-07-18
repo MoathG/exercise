@@ -154,7 +154,7 @@ return newArray;
 */
 
 function namesOnly(arr) {
-  // your code here
+  return arr.map(obj => obj.name)
 }
 /*
  * Exercise 5:  
@@ -197,7 +197,13 @@ function namesOnly(arr) {
  */
 
 function makeStrings(arr) {
-  // your code here
+  return arr.map(obj => {
+    if (obj.age >= 18) {
+      return obj.name + ' can go to the matrix '
+    } else {
+      return obj.name + ' is under age '
+    }
+  })
 }
 
 /*
@@ -240,7 +246,9 @@ function makeStrings(arr) {
  */
 
 function readyToPutInTheDOM(arr) {
-  // your code here
+  return arr.map(obj =>  {
+    return '<h1>' + obj.name + '<h1>' + '<h2>' + obj.age + '<h2>'
+  })
 }
 
 
@@ -260,7 +268,7 @@ function readyToPutInTheDOM(arr) {
 */
 
 function doubleValues(arr) {
-  // your code here
+  return arr.map(x => x *2)
 }
 
 /*
@@ -278,8 +286,9 @@ function doubleValues(arr) {
 */
 
 function valTimesIndex(arr) {
-  // your code here   
-
+     
+  return arr.map((x, y) => x * y)
+  
 }
 
 /*
@@ -295,7 +304,8 @@ function valTimesIndex(arr) {
 */
 
 function extractKey(arr, key) {
-  // your code here 
+  // return arr.map(obj => obj.name)
+  return arr.map(obj => obj[key])
 }
 
 /*
@@ -306,6 +316,8 @@ function extractKey(arr, key) {
 * extractFullName([{first: 'Elie', last:"Schoppik"}, {first: 'Tim', last:"Garcia"}, {first: 'Matt', last:"Lane"}, {first: 'Colt', last:"Steele"}]) // ['Elie Schoppik', 'Tim Garcia', 'Matt Lane', 'Colt Steele']
 */
 
-function extractFullName() {
-  // your code here 
+function extractFullName(arr) {
+  return arr.map(ele => {
+    return ele.first + ' ' + ele.last
+  })
 }
