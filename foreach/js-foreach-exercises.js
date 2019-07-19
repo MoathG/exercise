@@ -130,7 +130,7 @@ function vowelCount(str){
   str = str.split('');
   var obj = {};
 
-  str.forEach((item, index, arr) => {
+  str.forEach((item, index) => {
     if(str[index]==="i" || str[index]==="e"||str[index]==="o" ||str[index]==="a" ||str[index]==="u") {
       if(obj[item])
         obj[item] += 1;
